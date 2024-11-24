@@ -1,20 +1,46 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
-export default function App() {
+const CenterTextWithBoxes = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.text}>Zulfiana Jumadilla Lubis</Text>
+      <View style={styles.boxContainer}>
+        <View style={styles.box1}></View>
+        <View style={styles.box2}></View>
+      </View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f0f0f0",
+  },
+  text: {
+    fontSize: 24,
+    color: "blue",
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  boxContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "60%",
+  },
+  box1: {
+    width: 100,
+    height: 100,
+    backgroundColor: "pink",
+  },
+  box2: {
+    width: 100,
+    height: 100,
+    backgroundColor: "black",
   },
 });
+
+export default CenterTextWithBoxes;
